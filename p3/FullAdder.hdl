@@ -1,0 +1,19 @@
+// File: projects/2/FullAdder.hdl
+// This file is part of the CSE 390B
+// project series, adapted from the
+// Nand2Tetris project.
+
+/**
+ * Computes the sum of three bits.
+ */
+
+CHIP FullAdder {
+    IN a, b, c;  // 1-bit inputs
+    OUT sum,     // Right bit of a + b + c
+        carry;   // Left bit of a + b + c
+
+    PARTS:
+    HalfAdder(a=a, b=b, sum=d1, carry=c1);
+    HalfAdder(a=d1, b=c, sum=sum, carry=c2);
+    Or(a=c1, b=c2, out=carry);
+}

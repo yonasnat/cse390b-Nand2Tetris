@@ -1,0 +1,20 @@
+// File: projects/1/Or.hdl
+// This file is part of the CSE 390B
+// project series, adapted from the
+// Nand2Tetris project.
+
+ /**
+ * Or gate:
+ * out = 1 if (a == 1 or b == 1)
+ *       0 otherwise
+ */
+
+CHIP Or {
+    IN a, b;
+    OUT out;
+
+    PARTS:
+    Nand(a=a, b=a, out=x);
+    Nand(a=b, b=b, out=y);
+    Nand(a=x, b=y, out=out);
+}

@@ -1,0 +1,19 @@
+// File: projects/1/And.hdl
+// This file is part of the CSE 390B
+// project series, adapted from the
+// Nand2Tetris project.
+
+/**
+ * And gate: 
+ * out = 1 if (a == 1 and b == 1)
+ *       0 otherwise
+ */
+
+CHIP And {
+    IN a, b;
+    OUT out;
+
+    PARTS:
+    Nand(a=a, b=b, out=x);
+    NOT(in=x, out=out);
+}

@@ -1,0 +1,21 @@
+// File: projects/1/Xor.hdl
+// This file is part of the CSE 390B
+// project series, adapted from the
+// Nand2Tetris project.
+
+/**
+ * Exclusive-or gate:
+ * out = not (a == b)
+ */
+
+CHIP Xor {
+    IN a, b;
+    OUT out;
+
+    PARTS:
+    Not (in=a, out=nota);
+    Not (in=b, out=notb);
+    And (a=a, b=notb, out=x);
+    And (a=nota, b=b, out=y);
+    Or  (a=x, b=y, out=out);
+}

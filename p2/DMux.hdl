@@ -1,0 +1,21 @@
+// File: projects/1/DMux.hdl
+// This file is part of the CSE 390B
+// project series, adapted from the
+// Nand2Tetris project.
+
+/**
+ * Demultiplexor:
+ * {a, b} = {in, 0} if sel == 0
+ *          {0, in} if sel == 1
+ */
+
+CHIP DMux {
+    IN in, sel;
+    OUT a, b;
+
+    PARTS:
+    And(a=in, b=sel, out=b);
+    And(a=in, b=sel, out=andOut);
+    Not(in=andOut, out=a);
+    
+}
