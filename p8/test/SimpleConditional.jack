@@ -1,0 +1,5 @@
+// Expected result: the first 16 pixels of the screen should turn black
+
+if (1) {
+  let screen[0] = 0 - 1;
+}

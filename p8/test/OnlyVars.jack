@@ -1,0 +1,7 @@
+// Expected result: should only produce program preamble and infinite loop, no statement code.
+
+var int a, b, c, d, e;
+var int m[10], n[1], o[24], p[4];
+var int q, r[12], s[4], t, u;
+
+var int v;

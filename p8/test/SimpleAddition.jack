@@ -1,0 +1,5 @@
+// Expected result: the value 30 should be stored at address 256.
+
+var int a;
+
+let a = 10 + 20;

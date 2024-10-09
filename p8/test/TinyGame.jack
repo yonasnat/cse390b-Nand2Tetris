@@ -1,0 +1,44 @@
+// Expected result: Allows the user to paint a snake on a 16 x 16 px grid on the screen by pressing
+//                  the up, down, left, and right arrow keys! You have to admit, that's pretty cool :)
+
+var int row, col, key, i, delay;
+
+let row = 0;
+let col = 0;
+while (1) {
+    let key = keyboard[0];
+    if (key == 130) {             // left arrow
+        if (col != 0) {
+            let col = col - 1;
+        }
+    }
+    if (key == 131) {             // up arrow
+        if (row != 0) {
+            let row = row - 512;
+        }
+    }
+    if (key == 132) {             // right arrow
+        if (col != 31) {
+            let col = col + 1;
+        }
+    }
+    if (key == 133) {             // down arrow
+        if (row != 7680) {
+           let row = row + 512;
+        }
+    }
+
+    // draw the square
+    let i = 0;
+    while (i != 512) {
+        let screen[row + col + i] = 0 - 1;
+        let i = i + 32;
+    }
+
+    // waste 1000 loop cycles to slow down the snake
+    // (should be run with "Animate: No Animation"!)
+    let delay = 0;
+    while (delay != 1000) {
+        let delay = delay + 1;
+    }
+}

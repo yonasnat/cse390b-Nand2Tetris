@@ -1,0 +1,13 @@
+// Expected result: draws a 4 x 48 pixel black box in the upper left corner of the screen
+
+var int i, j;
+
+let i = 0;
+while (i != 128) {
+  let j = 0;
+  while (j != 3) {
+    let screen[i + j] = 0 - 1;
+    let j = j + 1;
+  }
+  let i = i + 32;
+}

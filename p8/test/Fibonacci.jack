@@ -1,0 +1,16 @@
+// Expected result: Screen shows a black bar in the 16-bit words corresponding to
+//                  the digits of the Fibonacci sequence (1, 1, 2, 3, 5, 8, etc.)
+
+var int n;
+var int a, b, temp;
+
+let a = 1;
+let b = 1;
+let n = 12;
+while (n != 0) {
+  let temp = b;
+  let b = a + b;
+  let a = temp;
+  let n = n - 1;
+  let screen[a] = 0 - 1;
+}

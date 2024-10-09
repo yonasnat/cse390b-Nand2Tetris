@@ -1,0 +1,4 @@
+// Expected result: the first 16 pixels of the screen should show the binary for 64
+//                  (the value 64 should be stored at 16384)
+
+let screen[0] = 10 + 20 + 34;

@@ -1,0 +1,27 @@
+// Expected result: draws a 6 x 48 pixel black box in the upper left corner of the screen,
+//                  with a set of grey 2 x 16 boxes going diagonally from upper left to
+//                  bottom right
+
+var int i, j, k, m;
+
+let i = 0;
+let k = 0;
+let m = 0;
+while (i != 192) {
+  let j = 0;
+  while (j != 3) {
+    if (j != m) {
+        let screen[i + j] = 0 - 1;
+    }
+    if (j == m) {
+        let screen[i + j] = 21845;
+    }
+    let j = j + 1;
+  }
+  let i = i + 32;
+  let k = k + 1;
+  if (k == 2) {
+    let k = 0;
+    let m = m + 1;
+  }
+}
